@@ -9,7 +9,7 @@ public class BankAccount {
 
     public BankAccount() {
         this("0",0.00,"Default name","Default email","Default number");
-        // zawsze w pierwszej linii konstruktora ( wywołanie innego konstruktora
+        // zawsze w pierwszej linii konstruktora ( wywołanie innego konstruktora)
         System.out.println("Empty constructor called");
     }
     public BankAccount(String accountNumber) {
