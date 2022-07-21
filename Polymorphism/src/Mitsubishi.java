@@ -12,7 +12,7 @@ public class Mitsubishi extends Car{
         System.out.println("Mitsubishi class speeds up");
         return "Mitsubishi -> accelerate()";
     }
-    
+
     @Override
     public String brake(){
         System.out.println("Mitsubishi class slows down");
