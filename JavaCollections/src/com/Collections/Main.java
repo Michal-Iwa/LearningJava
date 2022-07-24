@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Theatre theatre = new Theatre("Olympian",8,10);
         theatre.getSeats();
-        
         if(theatre.reserveSeat("A02")){
             System.out.println("Pay for the seat");
         }

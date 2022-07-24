@@ -26,12 +26,14 @@ public class Theatre {
     public String getTheatreName() {
         return theatreName;
     }
+
     public boolean reserveSeat(String seatNumber){
         Seat requestedSeat = new Seat(seatNumber, 0);
         int foundSeat = Collections.binarySearch(seats, requestedSeat, null);
         if(foundSeat >= 0){
             return seats.get(foundSeat).reserve();
         }
+
         System.out.println("There is no seat " + seatNumber);
         return false;
     }
