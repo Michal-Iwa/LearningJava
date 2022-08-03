@@ -1,3 +1,5 @@
+package Universe;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,10 +35,17 @@ public final class HeavenlyBody {
         }
         System.out.println("obj.getClass() is " + obj.getClass());
         System.out.println("this.getClass() is " + this.getClass());
+        //checking is obj is an instance of a Class heavenlyBody is unnecessary
+        //because class is final so it cannot be inherited from
         if(obj == null || obj.getClass() != this.getClass()){
             return false;
         }
         String objName = ((HeavenlyBody) obj).getName();
         return this.getName() == objName;
+    }
+    // https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-
+    @Override
+    public int hashCode() {
+        return this.name.hashCode() + 57;
     }
 }
